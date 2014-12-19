@@ -1,4 +1,4 @@
 Bioinformatics Algorithms
 =========================
 
-Programming exercises - bioinformatics algorithms from UC San Diego (F2013) course in Ruby.
+Programming exercises (in Ruby) - bioinformatics algorithms from UC San Diego (F2013) course.
