@@ -1,0 +1,34 @@
+Another good source: http://www.cc.gatech.edu/~ninamf/Algos11/lectures/lect0311.pdf
+
+
+int lcs_length(char * A, char * B)
+{
+  allocate storage for array L;
+  for (i = m; i >= 0; i--) 
+  { 
+      for (j = n; j >= 0; j--)
+      {
+        if (A[i] == '\0' || B[j] == '\0') L[i,j] = 0;
+        else if (A[i] == B[j]) L[i,j] = 1 + L[i+1, j+1];
+        else L[i,j] = max(L[i+1, j], L[i, j+1]);
+      }
+  }
+  return L[0,0];
+}
+
+
+sequence S = empty;
+i = 0;
+j = 0;
+while (i < m && j < n)
+{
+  if (A[i]==B[j])
+  {
+      add A[i] to end of S;
+      i++; j++;
+  }
+  else if (L[i+1,j] >= L[i,j+1]) i++;
+  else j++;
+}
+
+
