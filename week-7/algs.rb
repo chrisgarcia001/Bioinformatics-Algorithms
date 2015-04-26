@@ -45,7 +45,7 @@ def lcs a1, a2, i, j, subs = {}
 end
 
 
-# -- Fast version (From: http://www.ics.uci.edu/~eppstein/161/960229.html)
+# -- Fast version (Idea from: http://www.ics.uci.edu/~eppstein/161/960229.html)
 def build_matrix rows, columns, initv= nil
   mat = []
   1.upto(rows) do
